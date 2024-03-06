@@ -2,13 +2,16 @@ package com.example.flash_morse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity2 extends AppCompatActivity {
     private Button button_1;
-
+    private Button button_3 = findViewById(R.id.button3);
+    private EditText editText = findViewById(R.id.editTextText2);
 
     //private Button button_2;
 
@@ -29,6 +32,16 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        button_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
+            }
+        });
+    }
+    public void openActivity3(){
+        Intent intent = new Intent(this, MainActivity3.class);
+        startActivity(intent);
     }
     private void init(){
         button_1 = findViewById(R.id.button2);
@@ -46,7 +59,7 @@ public class MainActivity2 extends AppCompatActivity {
         }*/
 
 
-        String str = "hello";
+        String str = editText.getText().toString();
         char[] str_input = str.toCharArray();
         String sum = "";
         for(int i = 0; i < str_input.length; i++){
