@@ -34,7 +34,8 @@ public class MainActivity2 extends AppCompatActivity {
     }
     public void Enscript_Start(View view){
         String str = editText.getText().toString();
-        char[] str_input = str.toCharArray();
+        String lower = str.toLowerCase();
+        char[] str_input = lower.toCharArray();
         String sum = "";
         for(int i = 0; i < str_input.length; i++){
             for (int j = 0; j < english.length; j++){

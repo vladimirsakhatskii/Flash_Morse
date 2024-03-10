@@ -11,7 +11,7 @@
         android:id="@+id/button2"
         android:layout_width="140dp"
         android:layout_height="86dp"
-        android:onClick="onClickFlash"
+        android:onClick="Enscript_Start"
         android:text="Encrypt"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="373dp"
-        android:layout_height="65dp"
+        android:layout_width="295dp"
+        android:layout_height="74dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="  Enter word:"
