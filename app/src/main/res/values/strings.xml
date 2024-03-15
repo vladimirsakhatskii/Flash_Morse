@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Flash_Morse</string>
+    <string name="todo">TODO</string>
+    <string name="some_id">Morse flashlight</string>
 </resources>

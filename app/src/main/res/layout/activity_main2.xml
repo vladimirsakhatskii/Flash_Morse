@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#554F4F"
+    android:background="#1D255A"
     tools:context=".MainActivity2">
 
     <Button
@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="295dp"
-        android:layout_height="74dp"
+        android:layout_width="291dp"
+        android:layout_height="57dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="  Enter word:"
