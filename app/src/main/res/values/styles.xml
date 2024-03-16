@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="some_id">
+    <style name="text_1">
         <item name="android:textSize">18dp</item>
         <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="text_2">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="text_3">
+        <item name="android:textSize">36dp</item>
+        <item name="android:textColor">#8490D2</item>
     </style>
 </resources>

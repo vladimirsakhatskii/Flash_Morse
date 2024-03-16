@@ -7,34 +7,56 @@
     android:background="#1D255A"
     tools:context=".MainActivity2">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="140dp"
-        android:layout_height="86dp"
-        android:onClick="Enscript_Start"
-        android:text="Encrypt"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
-
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="291dp"
         android:layout_height="57dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/edt_background"
+        android:backgroundTint="#323D7A"
         android:ems="10"
-        android:hint="  Enter word:"
+        android:hint="  Enter word"
+        android:textColor="@color/white"
         android:inputType="text"
-        android:textColor="#000000"
-        android:textSize="20dp"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81"
+        app:layout_constraintVertical_bias="0.186"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="98dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left|top"
+        android:lineSpacingExtra="-44.2px"
+        android:text="@string/text_3"
+        android:textAppearance="@style/text_3"
+        android:textFontWeight="700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:background="#1D255A"
+        android:onClick="Enscript_Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622"
+        app:srcCompat="@drawable/group_5"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

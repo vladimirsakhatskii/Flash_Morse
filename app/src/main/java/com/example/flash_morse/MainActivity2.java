@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class MainActivity2 extends AppCompatActivity {
     EditText editText;
     private FlashClass flashClass;
-    Button button_enScript;
+    ImageButton button_enScript;
     char[] english =  {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
             'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
@@ -30,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
     public void init(){
         editText = findViewById(R.id.editTextText);
-        button_enScript = findViewById(R.id.button2);
+        button_enScript = findViewById(R.id.imageButton2);
         flashClass = new FlashClass(this);
     }
     public void Enscript_Start(View view){
