@@ -13,7 +13,7 @@ public class MainActivity2 extends AppCompatActivity {
     EditText editText;
     private FlashClass flashClass;
     private SoundClass soundClass;
-    MediaPlayer tochka, tire;
+    MediaPlayer tire,tochka;
     ImageButton button_enScript;
     char[] english =  {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
@@ -37,6 +37,8 @@ public class MainActivity2 extends AppCompatActivity {
         button_enScript = findViewById(R.id.imageButton2);
         flashClass = new FlashClass(this);
         soundClass = new SoundClass(this);
+        tire = MediaPlayer.create(this,R.raw.tire);
+        tochka = MediaPlayer.create(this, R.raw.tochka);
     }
     public void Enscript_Start(View view){
         String str = editText.getText().toString();
@@ -55,7 +57,6 @@ public class MainActivity2 extends AppCompatActivity {
             char currentChar = sum.charAt(k);
             if (currentChar == '.') {
                 flashClass.On();
-                soundClass.setTochka();
                 try {
                     Thread.sleep(250);
                 } catch (InterruptedException e) {
@@ -65,12 +66,51 @@ public class MainActivity2 extends AppCompatActivity {
             }
             else if (currentChar == '-') {
                 flashClass.On();
-                soundClass.setTire();
                 try{
                     Thread.sleep(500);}
                 catch (InterruptedException e){
                     e.printStackTrace();}
                 flashClass.Off();
+            }
+            else if (currentChar == ' ') {
+                try {
+                    Thread.sleep(500);}
+                catch (InterruptedException e) {
+                    e.printStackTrace();}
+            }
+        }
+        editText.setText("Complied!");
+        progressDialog.dismiss();
+    }
+    public void Masha(View view){
+        String str = editText.getText().toString();
+        String lower = str.toLowerCase();
+        char[] str_input = lower.toCharArray();
+        String sum = "";
+        for(int i = 0; i < str_input.length; i++){
+            for (int j = 0; j < english.length; j++){
+                if (english[j] == str_input[i]){
+                    sum = sum + morse[j] + " ";}
+            }
+        }
+        ProgressDialog progressDialog = ProgressDialog.show(this, "dialog title",
+                "dialog message", false);
+        for(int k = 0; k < sum.length(); k++) {
+            char currentChar = sum.charAt(k);
+            if (currentChar == '.') {
+                soundClass.SoundPlay(tire);
+                try {
+                    Thread.sleep(250);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            else if (currentChar == '-') {
+                soundClass.SoundPlay(tochka);
+                try{
+                    Thread.sleep(500);}
+                catch (InterruptedException e){
+                    e.printStackTrace();}
             }
             else if (currentChar == ' ') {
                 try {
