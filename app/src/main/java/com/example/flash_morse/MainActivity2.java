@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -41,6 +42,10 @@ public class MainActivity2 extends AppCompatActivity {
         soundClass = new SoundClass(this);
         tire = MediaPlayer.create(this,R.raw.tire);
         tochka = MediaPlayer.create(this, R.raw.tochka);
+    }
+    public void onClick2(View view){
+        Intent intent = new Intent(this,MainActivity3.class);
+        startActivity(intent);
     }
     public void Enscript_Start(View view){
         String str = editText.getText().toString();
